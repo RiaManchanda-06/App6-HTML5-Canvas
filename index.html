@@ -47,7 +47,14 @@ function draw_myCanvas(){
 
 }
 
-
+//this code will draw my name
+function name_myCanvas (){
+	var myCanvas_canvas = document.getElementById("myCanvas"); //this code will find the canvas element in the model
+	var myCanvas_canvas = myCanvas_canvas.getContext("2d"); //this code draws the context
+	myCanvas_context.font = "20px Arial"; //this code will give me the font size and style
+	myCanvas_context.fillText("Ria Manchanda", 100,100); //this code will draw my name at (100,100).
+	
+}
 
 
 
