@@ -56,6 +56,20 @@ function name_myCanvas (){
 	
 }
 
+//this code adds an image of a dog. 
+function image_myCanvas(){
+	var myCanvas_canvas = document.getElementById("myCanvas"); //this code will find the canvas element in the model
+	var myCanvas_canvas = myCanvas_canvas.getContext("2d"); //this code draws the context
+	var images = new Image(); //creates image
+	images.src = "images.jpg"; //this is the source of the image
+	images.onload = function (){
+		var targetWidth = images.width * 0.5; 
+		var targetHeight = images.height * 0.5; 
+}
+	myCanvas_context.drawImage(images, 0.5, 0.5, targetWidth, targetHeight); 
+	};
+
+	}
 
 
 </script>
