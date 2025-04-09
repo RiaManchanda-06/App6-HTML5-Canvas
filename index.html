@@ -31,9 +31,58 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
       <meta name="apple-mobile-web-app-capable" content="yes">
       <link rel="stylesheet" href="w3.css">
       <link rel="stylesheet" href="w3-colors-flat.css">
-   </head> 
+	 <style>	
+.body {
+     margin: 0em;
+}
+.page {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    overflow-y: auto;
+    z-index: 0;
+    background-color: hsl(0,0%,100%);
+}
+  .page:target {
+    left: 0vw;
+    z-index: 1;
+}
+</style>
+ </head> 
 
+<body>
+<div id="header" class="w3-container w3-flat-carrot">
+	<h1>App6---HTML5-Canvas</h1>
+</div>
+	<br>
+	<!-- this code will make the border to stand out -->
+	<canvas id="myCanvas" width="300" height="400" style="border:1px solid #000000;"></canvas>  
+	<br>
+<div class ="button-container" id="one">
+		<!--this code makes a button that retrives a rectangle when clicked. -->
+		<a href = "#one" onclick="draw_myCanvas()" class="w3-btn w3-black"> Rectangle </a>
+		
+		<a href = "#two" onclick="name_myCanvas()" class="w3-btn w3-black"> My Name </a>
+		
+		<a href = "#three" onclick="image_myCanvas()" class="w3-btn w3-black"> My Dog image </a>
+		
+		<a href = "#four" onclick="clear_myCanvas()" class="w3-btn w3-black" style="margin-top: 10px;"> Clear Canvas </a>
+		
+	
+</div>
+	
 
+		
+	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
+ 	
+	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
+
+<footer class="w3-bottom w3-container w3-flat-carrot">
+	<p>DIY!</p>
+</footer>
+	
 <script>
 var docMod = document.lastModified; // loads last modified time stamp into docMod variable
 alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
@@ -82,57 +131,6 @@ function image_myCanvas(){
 	
 
 
-
-<style>	
-.body {
-     margin: 0em;
-}
-.page {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: -100vw;
-    overflow-y: auto;
-    z-index: 0;
-    background-color: hsl(0,0%,100%);
-}
-  .page:target {
-    left: 0vw;
-    z-index: 1;
-}
-</style>
-
-<body>
-<div id="header" class="w3-container w3-flat-carrot">
-	<h1>App6---HTML5-Canvas</h1>
-</div>
-	<br>
-	<!-- this code will make the border to stand out -->
-	<canvas id="myCanvas" width="300" height="400" style="border:1px solid #000000;"></canvas>  
-	<br>
-<div class ="button-container" id="one">
-		<!--this code makes a button that retrives a rectangle when clicked. -->
-		<a href = "#one" onclick="draw_myCanvas()" class="w3-btn w3-black"> Rectangle </a>
-		
-		<a href = "#two" onclick="name_myCanvas()" class="w3-btn w3-black"> My Name </a>
-		
-		<a href = "#three" onclick="image_myCanvas()" class="w3-btn w3-black"> My Dog image </a>
-		
-		<a href = "#four" onclick="clear_myCanvas()" class="w3-btn w3-black" style="margin-top: 10px;"> Clear Canvas </a>
-		
-	
-</div>
-	
-
-		
-	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
- 	
-	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
-
-<footer class="w3-bottom w3-container w3-flat-carrot">
-	<p>DIY!</p>
-</footer>
 
 </body>
 </html>
