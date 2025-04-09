@@ -90,41 +90,40 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 
 // This code draws a rectangle that will be filled
 function draw_myCanvas(){
-	var myCanvas_canvas = document.getElementById("myCanvas"); //this code will find the canvas element in the model
-	var myCanvas_canvas = myCanvas_canvas.getContext("2d"); //this code draws the context
-	myCanvas_context.fillRect( 50,50, 200, 180); //this code plots the rectangle at (50,50) and it has dimensions of a width of 200 and height of 180.
+	var canvas = document.getElementById("myCanvas"); //this code will find the canvas element in the model
+	var context = canvas.getContext("2d"); //this code draws the context
+	context.fillRect( 50,50, 200, 180); //this code plots the rectangle at (50,50) and it has dimensions of a width of 200 and height of 180.
 
 }
 
 //this code will draw my name
 function name_myCanvas (){
-	var myCanvas_canvas = document.getElementById("myCanvas"); //this code will find the canvas element in the model
-	var myCanvas_canvas = myCanvas_canvas.getContext("2d"); //this code draws the context
-	myCanvas_context.font = "20px Arial"; //this code will give me the font size and style
-	myCanvas_context.fillText("Ria Manchanda", 100,100); //this code will draw my name at (100,100).
+	var canvas = document.getElementById("myCanvas"); //this code will find the canvas element in the model
+	var context = canvas.getContext("2d"); //this code draws the context
+	context.font = "20px Arial"; //this code will give me the font size and style
+	context.fillText("Ria Manchanda", 100,100); //this code will draw my name at (100,100).
 	
 }
 
 //this code adds an image of a dog. 
 function image_myCanvas(){
-	var myCanvas_canvas = document.getElementById("myCanvas"); //this code will find the canvas element in the model
-	var myCanvas_canvas = myCanvas_canvas.getContext("2d"); //this code draws the context
+	var canvas = document.getElementById("myCanvas"); //this code will find the canvas element in the model
+	var context = canvas.getContext("2d"); //this code draws the context
 	var dog = new Image(); //creates image
 	dog.src = "dog.jpg"; //this is the source of the image
 	dog.onload = function (){
 		var targetWidth = dog.width * 0.5; 
 		var targetHeight = dog.height * 0.5; 
-}
-	myCanvas_context.drawImage(dog, 0.5, 0.5, targetWidth, targetHeight); 
+	context.drawImage(dog, 0.5, 0.5, targetWidth, targetHeight); 
 	};
 
-	}
+}
 
 //this code will clear my Canvas
 	function clear_myCanvas(){
-	var myCanvas_canvas = document.getElementById("myCanvas"); //this code will find the canvas element in the model
-	var myCanvas_context = myCanvas_canvas.getContext("2d"); //this code draws the context
-	myCanvas_context.clearRect(0,0,500,500); //this code will clear all of the canvas area of 500 by 500.
+	var canvas = document.getElementById("myCanvas"); //this code will find the canvas element in the model
+	var context = canvas.getContext("2d"); //this code draws the context
+	context.clearRect(0,0,500,500); //this code will clear all of the canvas area of 500 by 500.
 	}	
 
 </script>
